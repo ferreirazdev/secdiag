@@ -1,12 +1,47 @@
-# secdiag
+<p align="center">
+  <img src="./assets/images/logo.png" width="55%" alt="secdiag logo"/><br/>
+</p>
 
-**Terminal-based security diagnostics for backend engineers.**
+<p align="center">
+  Terminal-based security diagnostics for backend engineers.
+  <br/>
+  <br/>
+  <a href="https://github.com/ferreirazdev/secdiag/blob/main/LICENSE">
+    <img alt="GitHub" src="https://img.shields.io/github/license/ferreirazdev/secdiag"/>
+  </a>
+  <a href="https://goreportcard.com/report/github.com/ferreirazdev/secdiag">
+    <img src="https://goreportcard.com/badge/github.com/ferreirazdev/secdiag" alt="Go Report Card"/>
+  </a>
+  <a href="https://pkg.go.dev/github.com/ferreirazdev/secdiag">
+    <img src="https://pkg.go.dev/badge/github.com/ferreirazdev/secdiag.svg" alt="Go Reference"/>
+  </a>
+  <a href="https://github.com/ferreirazdev/secdiag/issues">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="contributions welcome"/>
+  </a>
+</p>
 
-secdiag is an interactive TUI (Terminal UI) built in Go. Run quick security checks against your servers and APIs—TLS configuration, security headers, and common misconfigurations—without leaving the terminal.
+<p align="center">
+  <sub>Built with <a href="https://golang.org">Go</a> and <a href="https://github.com/charmbracelet/bubbletea">Bubble Tea</a></sub>
+</p>
 
 ---
 
-## About
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Introduction
+
+**secdiag** is an interactive TUI (Terminal UI) built in Go. Run quick security checks against your servers and APIs—TLS configuration, security headers, and common misconfigurations—without leaving the terminal.
 
 Backend services often ship with weak TLS, missing security headers, or exposed ports. secdiag helps you catch these issues early with a focused, keyboard-driven interface. No browser, no dashboards—just point it at a host and get a clear security snapshot.
 
@@ -25,37 +60,36 @@ Backend services often ship with weak TLS, missing security headers, or exposed 
 
 ---
 
-## Installation
+## Getting Started
 
-**From source (requires Go 1.21+):**
+**Prerequisites:** Go 1.21+
+
+**Clone and run:**
 
 ```bash
 git clone https://github.com/ferreirazdev/secdiag.git
 cd secdiag
-go build -o secdiag ./cmd/secdiag
+make run
 ```
 
 Or run without installing:
 
 ```bash
-make run
-# or
 go run ./cmd/secdiag
 ```
 
----
-
-## Quick start
+**Build a binary:**
 
 ```bash
-make run
+go build -o secdiag ./cmd/secdiag
+./secdiag
 ```
 
 Launch the TUI, then follow the on-screen prompts. Use **q** or **Ctrl+C** to quit.
 
 ---
 
-## Project structure
+## Project Structure
 
 ```
 secdiag/
@@ -84,10 +118,10 @@ secdiag/
 
 ## Contributing
 
-Contributions are welcome. Open an issue to discuss ideas or send a pull request. For larger changes, start with an issue so we can align on design.
+Contributions are welcome. Open an [issue](https://github.com/ferreirazdev/secdiag/issues) to discuss ideas or send a pull request. For larger changes, start with an issue so we can align on design.
 
 ---
 
 ## License
 
-[MIT](LICENSE) — use it in your own projects and portfolios.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
